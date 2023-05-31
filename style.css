@@ -41,6 +41,10 @@ nav {
   color: grey;
 }
 
+.hamburger {
+  display: none;
+}
+
 /* * container */
 main {
   display: flex;
@@ -101,4 +105,43 @@ section > p {
 
 .title + p {
   font-size: 16px;
+}
+
+@media (max-width: 1080px) {
+  .items-container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .item {
+    width: 45%;
+  }
+}
+
+@media (max-width: 748px) {
+  .items-container {
+    flex-direction: column;
+  }
+
+  .item {
+    width: 100%;
+  }
+
+  .menu-container {
+    justify-content: space-between;
+  }
+
+  .menu-container > div {
+    width: auto;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
 }
